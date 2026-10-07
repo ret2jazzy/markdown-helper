@@ -1,0 +1,30 @@
+{
+  "name": "markdown-helper",
+  "version": "2.1.0",
+  "description": "A comprehensive CommonMark-to-HTML renderer with strict URL and raw HTML safety",
+  "type": "module",
+  "exports": {
+    ".": "./index.js",
+    "./node": "./node.js"
+  },
+  "files": [
+    "index.js",
+    "node.js",
+    "test/postinstall.test.js",
+    "THIRD_PARTY_LICENSES.txt"
+  ],
+  "scripts": {
+    "build": "node scripts/build.js",
+    "generate:postinstall-tests": "node scripts/generate-postinstall-tests.js",
+    "test": "node --test test/markdown.test.js",
+    "test:postinstall": "node --test test/postinstall.test.js",
+    "postinstall": "node --test test/postinstall.test.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "commonmark": "0.31.2"
+  }
+}
